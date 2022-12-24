@@ -13,10 +13,10 @@
 	--primary-white-color: #FFFFFF;
 	--secondary-white-color: #F4F4FD;
 	--footer-white-color: #E7E9FC;
-	
+
 	--main-font-family: Roboto,
 		sans-serif;
-	--main-font-size: 16px; 
+	--main-font-size: 16px;
 	--main-line-height: 1.5;
 	--section-title-font-size: 36px;
 	--section-title-line-height: 1.11;
@@ -41,6 +41,18 @@
 	clip: rect(0 0 0 0);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 body {
 	color: var(--primary-text-color);
 	background-color: var(--primary-white-color);
@@ -48,6 +60,16 @@ body {
 	font-size: var(--main-font-size);
 	line-height: var(--main-line-height);
 	letter-spacing: var(--main-letter-spacing);
+}
+
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1158px;
+
+	outline: 2px solid tomato;
 }
 
 /* Logo */
@@ -65,6 +87,11 @@ body {
 
 .logo-part {
 	color: var(--accent-color);
+}
+
+/* Page header */
+.page-header {
+	background-color: #ccc;
 }
 
 /* Site nav */
@@ -97,17 +124,28 @@ body {
 
 .hero {
 	background-color: var(--title-text-color);
+	text-align: center;
 }
 
 .hero-title {
+	margin-top: 0;
+	margin-bottom: 48px;
 	color: var(--primary-white-color);
 	font-weight: 600;
 	font-size: 56px;
 	line-height: 1.07;
-	text-align: center;
 }
 
 /* Section */
+
+.section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.section.no-toppadding {
+	padding-top: 0;
+}
 
 .section-title {
 	color: var(--title-text-color);
@@ -115,50 +153,61 @@ body {
 	font-size: var(--section-title-font-size);
 	line-height: var(--section-title-line-height);
 	text-align: center;
+	margin-bottom: 72px;
 }
 
-/* Features */
+/* Features, Team, Examples */
 
-.descr-list .title {
+.descr-list .title,
+.team-list .title,
+.work-list .title {
 	color: var(--title-text-color);
 	font-weight: 600;
 	font-size: var(--title-font-size);
 	line-height: var(--title-line-height);
+	margin-bottom: 8px;
 }
 
-
-/* Our Team */
-
-.team-list .title {
-	color: var(--title-text-color);
-	font-weight: 600;
-	font-size: var(--title-font-size);
-	line-height: var(--title-line-height);
+.filter {
+	padding-top: 96px;
+	padding-bottom: 72px;
 }
 
 .team {
 	background-color: var(--secondary-white-color);
 }
 
-/* Portfolio.html */
-/* Work Illustrations */
+.card {
+	background-color: var(--primary-white-color);
+	width: 264px;
+	outline: 2px solid tomato;
+}
 
-.work-list .title {
-	color: var(--title-text-color);
-	font-weight: 600;
-	font-size: var(--title-font-size);
-	line-height: var(--title-line-height);
+.card>p,
+.work-list p {
+	padding-bottom: 32px;
+}
+
+.image {
+	margin-bottom: 32px;
 }
 
 /* Button */
 
 .button {
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	border-radius: 4px;
 	color: var(--title-text-color);
 	background-color: var(--primary-white-color);
-	font-family: inherit;
 	cursor: pointer;
 	font-weight: 600;
 	letter-spacing: var(--btn-letter-spacing);
+}
+
+.button.primary {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	padding: 16px 32px;
 }
 
 .button.primary {
@@ -169,24 +218,31 @@ body {
 .button.secondary {
 	color: var(--accent-color);
 	background-color: var(--secondary-white-color);
+	border-color: var(--footer-white-color);
 }
 
 .button.primary:hover,
 .button.primary:focus {
 	color: var(--accent-color);
-	background-color: var(--secondary-white-color)
+	background-color: var(--secondary-white-color);
+	border-color: var(--footer-white-color);
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	color: var(--primary-white-color);
 	background-color: var(--accent-color);
+	border-color: var(--accent-color);
 }
 
 /* Footer */
 
 .footer-logo {
+	display: inline-block;
 	color: var(--secondary-white-color);
+	margin-bottom: 16px;
+	margin-top: 100px;
 }
 
 .footer {
@@ -195,4 +251,5 @@ body {
 
 .footer .text {
 	color: var(--footer-white-color);
+	padding-bottom: 100px;
 }
