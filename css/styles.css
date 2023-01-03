@@ -53,6 +53,11 @@ ul {
 	margin: 0;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+}
+
 body {
 	color: var(--primary-text-color);
 	background-color: var(--primary-white-color);
@@ -110,10 +115,6 @@ body {
 	display: flex;
 	margin-left: 77px;
 }
-
-/* .site-nav .item+.item {
-	margin-left: 40px;
-} */
 
 .site-nav .item:not(:last-child) {
 	margin-right: 40px;
@@ -230,14 +231,31 @@ body {
 	margin-bottom: 48px;
 }
 
-.work-list .item {
-	border: 1px solid var(--footer-white-color);
+.work-content {
+	border-left: 1px solid var(--footer-white-color);
+	border-bottom: 1px solid var(--footer-white-color);
+	border-right: 1px solid var(--footer-white-color);
 }
 
-.work-list .title,
+/* .work-list .title,
 .team-list .title {
 	padding-left: 16px;
 	padding-top: 32px;
+}
+
+.card>p,
+.work-list p {
+	padding-bottom: 32px;
+	padding-left: 16px;
+} */
+
+.work-content {
+	padding: 32px 16px;
+}
+
+.card-content {
+	padding: 32px 16px;
+	text-align: center;
 }
 
 
@@ -276,13 +294,9 @@ body {
 	border-radius: 0px 0px 4px 4px;
 }
 
-.card>p,
-.work-list p {
-	padding-bottom: 32px;
-	padding-left: 16px;
-}
 
-.image {}
+.image {
+}
 
 /* Filter */
 
